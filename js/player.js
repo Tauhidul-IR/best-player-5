@@ -38,10 +38,11 @@ function getName(name) {
     showName();
 }
 
-
+// 1st calculation
 document.getElementById('calculate').addEventListener('click', function () {
     const perPlayerCost = document.getElementById('player-cost-input');
-    const playerCost = perPlayerCost.value;
+    const playerCostString = perPlayerCost.value;
+    const playerCost = parseInt(playerCostString);
 
 
     const playerSelected = document.getElementById('playercount');
@@ -49,10 +50,36 @@ document.getElementById('calculate').addEventListener('click', function () {
     const selectedPlayer = parseInt(playerSelectedString);
 
     const playerexp = document.getElementById('player-exprenses');
-
     const totalExprenses = playerCost * selectedPlayer;
-
     playerexp.innerText = totalExprenses;
+
+
+})
+
+// final calculation
+document.getElementById('total').addEventListener('click', function () {
+    const managerCost = document.getElementById('manager-cost');
+    const managerCostString = managerCost.value;
+    const managerCostAmount = parseInt(managerCostString);
+    // console.log(typeof managerCostAmount)
+
+
+    const coachCost = document.getElementById('coach-cost');
+    const coachCostString = coachCost.value;
+    const coachCostAmount = parseInt(coachCostString);
+
+    // console.log(typeof coachCostAmount)
+
+    const playerExprensesCost = document.getElementById('player-exprenses');
+    const playerExprensestCosString = playerExprensesCost.innerText;
+    const totalpLayerExprenses = parseInt(playerExprensestCosString);
+
+    // console.log(typeof totalpLayerExprenses)
+
+
+    const finalCost = document.getElementById('finalCost');
+    const allExprenses = managerCostAmount + coachCostAmount + totalpLayerExprenses;
+    finalCost.innerText = allExprenses;
 
 
 })
