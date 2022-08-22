@@ -1,6 +1,5 @@
 let nameOfPlayer = [];
 
-
 function showName() {
 
     let totalPlayers = 0;
@@ -17,7 +16,7 @@ function showName() {
        <li>${i + 1}<spna> </spna> <spna>${nameOfPlayer[i]}</spna></li>
         `;
         showNamw.appendChild(ol);
-        // <h2></h2>
+
 
     }
 
@@ -28,7 +27,7 @@ function getName(name) {
     const playerName = name.parentNode.parentNode.children[0].innerText;
 
     if (nameOfPlayer.length > 4) {
-        alert('not able');
+        alert('Not able to Add monre');
         return;
     }
     else {
@@ -61,20 +60,20 @@ document.getElementById('total').addEventListener('click', function () {
     const managerCost = document.getElementById('manager-cost');
     const managerCostString = managerCost.value;
     const managerCostAmount = parseInt(managerCostString);
-    // console.log(typeof managerCostAmount)
+
 
 
     const coachCost = document.getElementById('coach-cost');
     const coachCostString = coachCost.value;
     const coachCostAmount = parseInt(coachCostString);
 
-    // console.log(typeof coachCostAmount)
+
 
     const playerExprensesCost = document.getElementById('player-exprenses');
     const playerExprensestCosString = playerExprensesCost.innerText;
     const totalpLayerExprenses = parseInt(playerExprensestCosString);
 
-    // console.log(typeof totalpLayerExprenses)
+
 
 
     const finalCost = document.getElementById('finalCost');
