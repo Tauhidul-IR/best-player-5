@@ -2,19 +2,26 @@ let nameOfPlayer = [];
 
 
 function showName() {
+
+    let totalPlayers = 0;
+    const Player = document.getElementById("playercount");
+    Player.innerText = nameOfPlayer.length;
+
     const showNamw = document.getElementById('showplayerName');
     showNamw.innerText = '';
     for (let i = 0; i < nameOfPlayer.length; i++) {
+        totalPlayers += nameOfPlayer[i];
 
-
-        const ol = document.createElement("p");
+        const ol = document.createElement("ol");
         ol.innerHTML = `
-        <h2>${i + 1}<spna> </spna> <spna>${nameOfPlayer[i]}</spna></h2>
+       <li>${i + 1}<spna> </spna> <spna>${nameOfPlayer[i]}</spna></li>
         `;
         showNamw.appendChild(ol);
-
+        // <h2></h2>
 
     }
+
+
 }
 
 function getName(name) {
@@ -30,5 +37,24 @@ function getName(name) {
 
     showName();
 }
+
+
+document.getElementById('calculate').addEventListener('click', function () {
+    const perPlayerCost = document.getElementById('player-cost-input');
+    const playerCost = perPlayerCost.value;
+
+
+    const playerSelected = document.getElementById('playercount');
+    const playerSelectedString = playerSelected.innerText;
+    const selectedPlayer = parseInt(playerSelectedString);
+
+    const playerexp = document.getElementById('player-exprenses');
+
+    const totalExprenses = playerCost * selectedPlayer;
+
+    playerexp.innerText = totalExprenses;
+
+
+})
 
 

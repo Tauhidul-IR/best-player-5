@@ -124,8 +124,8 @@
                     <div class="grid grid-cols-1 gap-3">
                         <div class="card w-96 bg-base-100 shadow-xl">
                             <div class="p-4 text-gray-200">
-                                <h2 class=" text-3xl text center">Select Player</h2>
-                                <div id="showplayerName" class="text-start ">
+                                <h2 class=" text-3xl text center">Select Player <span id="playercount">0</span></h2>
+                                <div id="showplayerName" class="text-start text-2xl">
 
                                 </div>
                             </div>
@@ -137,12 +137,12 @@
                                 <h2 class="card-title text-3xl justify-center">Budget</h2>
                                 <div class="text-2xl mb-4">
                                     <h3 class="inline">per player</h3>
-                                    <input class="w-28 text-neutral-800" type="text">
+                                    <input id="player-cost-input" class="w-28 text-neutral-800" type="text">
                                 </div>
                                 <div class="card-actions justify-center mb-4">
-                                    <button class="btn btn-primary text-2xl px-10">Calculate</button>
+                                    <button id="calculate" class="btn btn-primary text-2xl px-10">Calculate</button>
                                 </div>
-                                <h3 class="mb-4 text-2xl">player Expenses $<span>00</span></h3>
+                                <h3 class="mb-4 text-2xl">player Expenses $<span id="player-exprenses">00</span></h3>
                                 <div class="text-2xl mb-4">
                                     <h3 class="inline">Manager </h3>
                                     <input class="w-28 text-neutral-800" type="text">
