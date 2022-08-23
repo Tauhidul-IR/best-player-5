@@ -1,13 +1,13 @@
 let nameOfPlayer = [];
 
-function showName() {
 
+function showName() {
     let totalPlayers = 0;
     const Player = document.getElementById("playercount");
     Player.innerText = nameOfPlayer.length;
 
-    const showNamw = document.getElementById('showplayerName');
-    showNamw.innerText = '';
+    const showName = document.getElementById('showplayerName');
+    showName.innerText = '';
     for (let i = 0; i < nameOfPlayer.length; i++) {
         totalPlayers += nameOfPlayer[i];
 
@@ -15,16 +15,13 @@ function showName() {
         ol.innerHTML = `
        <li>${i + 1}<spna> </spna> <spna>${nameOfPlayer[i]}</spna></li>
         `;
-        showNamw.appendChild(ol);
-
-
+        showName.appendChild(ol);
     }
-
-
 }
 
-function getName(name) {
 
+
+function getName(name) {
     const playerName = name.parentNode.parentNode.children[0].innerText;
     if (nameOfPlayer.length > 4) {
         alert('Not able to Add monre');
