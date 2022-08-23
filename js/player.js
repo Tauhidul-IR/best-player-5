@@ -24,8 +24,8 @@ function showName() {
 }
 
 function getName(name) {
-    const playerName = name.parentNode.parentNode.children[0].innerText;
 
+    const playerName = name.parentNode.parentNode.children[0].innerText;
     if (nameOfPlayer.length > 4) {
         alert('Not able to Add monre');
         return;
@@ -82,5 +82,21 @@ document.getElementById('total').addEventListener('click', function () {
 
 
 })
+
+
+// button disable--
+let chwk = [];
+function show(value) {
+    const a = value;
+    chwk.push(a)
+    for (let i = 0; i < chwk.length; i++) {
+        if (chwk.length < 6) {
+            a.disabled = true;
+        }
+    }
+
+}
+
+
 
 
