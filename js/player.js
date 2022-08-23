@@ -34,16 +34,28 @@ function getName(name) {
     showName();
 }
 
+
+function getInputText(inputtext) {
+    const textInput = document.getElementById(inputtext);
+    const textInputString = textInput.innerText;
+    const finalText = parseInt(textInputString);
+    return finalText;
+}
+
+
+function getInputValue(inputValue) {
+    const inputValus = document.getElementById(inputValue);
+    const inputValueString = inputValus.value;
+    const finalValue = parseInt(inputValueString);
+    return finalValue;
+}
+
 // 1st calculation
 document.getElementById('calculate').addEventListener('click', function () {
-    const perPlayerCost = document.getElementById('player-cost-input');
-    const playerCostString = perPlayerCost.value;
-    const playerCost = parseInt(playerCostString);
+    const playerCost = getInputValue("player-cost-input");
 
 
-    const playerSelected = document.getElementById('playercount');
-    const playerSelectedString = playerSelected.innerText;
-    const selectedPlayer = parseInt(playerSelectedString);
+    const selectedPlayer = getInputText('playercount');
 
     const playerexp = document.getElementById('player-exprenses');
     const totalExprenses = playerCost * selectedPlayer;
@@ -54,23 +66,14 @@ document.getElementById('calculate').addEventListener('click', function () {
 
 // final calculation
 document.getElementById('total').addEventListener('click', function () {
-    const managerCost = document.getElementById('manager-cost');
-    const managerCostString = managerCost.value;
-    const managerCostAmount = parseInt(managerCostString);
+
+    const managerCostAmount = getInputValue("manager-cost");
 
 
-
-    const coachCost = document.getElementById('coach-cost');
-    const coachCostString = coachCost.value;
-    const coachCostAmount = parseInt(coachCostString);
+    const coachCostAmount = getInputValue('coach-cost');
 
 
-
-    const playerExprensesCost = document.getElementById('player-exprenses');
-    const playerExprensestCosString = playerExprensesCost.innerText;
-    const totalpLayerExprenses = parseInt(playerExprensestCosString);
-
-
+    const totalpLayerExprenses = getInputText('player-exprenses');
 
 
     const finalCost = document.getElementById('finalCost');
