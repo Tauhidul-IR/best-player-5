@@ -82,13 +82,13 @@ document.getElementById('total').addEventListener('click', function () {
 
 
 // button disable--
-let chwk = [];
+let SelectedBtnList = [];
 function show(value) {
-    const a = value;
-    chwk.push(a)
-    for (let i = 0; i < chwk.length; i++) {
-        if (chwk.length < 6) {
-            a.disabled = true;
+    const selectedBtn = value;
+    SelectedBtnList.push(selectedBtn)
+    for (let i = 0; i < SelectedBtnList.length; i++) {
+        if (SelectedBtnList.length < 6) {
+            selectedBtn.disabled = true;
         }
     }
 
